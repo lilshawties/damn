@@ -44,10 +44,13 @@ console.log('\x1b[36m%s\x1b[0m', '|    ❌ Commands Failed To Load!');
 console.log('\x1b[32m%s\x1b[0m', `|    🌼 Logged in as ${client.user.username}`);
 
 const serverCount = client.guilds.cache.size;
-setInterval(() => client.user.setActivity({ 
-  name:`.𝘣𝘰𝘮𝘪𝜗𝜚˚⋆`, 
-  type: ActivityType.Playing }), 10000);
-client.errorLog = config.errorLog
+  setTimeout(() => {
+    console.log('\x1b[32m%s\x1b[0m', `|    🎯 Activity sucessfully set!`);
+    client.user.setPresence({
+      activities: [{ name: `dad`, type: ActivityType.Watching }],
+      status: 'online',
+    });
+  }, 2000); 
   
 }
 
